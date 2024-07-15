@@ -28,8 +28,8 @@ HID_TMP = "COM8"
 SUB_ADD_TMP = 2
 
 # This is a dictionary that maps the valve position and ID to an integer.
-VALVE_POSITION = {"A": 0, "B": 1, "Unknown": 1, "pulse": 0, "cont": 1, "mix": 1}
-VALVE_ID = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7, "H": 8, "I": 9}
+# VALVE_POSITION = {"A": 0, "B": 1, "Unknown": 1, "pulse": 0, "cont": 1, "mix": 1}
+# VALVE_ID = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7, "H": 8, "I": 9}
 
 
 class GasControl:
