@@ -790,7 +790,7 @@ class GasControl:
             "CO2_AH": self.feed_CO2_AB,
             "CO2_AL": self.feed_CO2_AB,
             "CO2_BH": self.feed_CO2_AB,
-            "CO2_AL": self.feed_CO2_AB,
+            "CO2_BL": self.feed_CO2_AB,
             "He_A": self.carrier_He_A,
             "He_B": self.carrier_He_B,
             "Ar_A": self.carrier_Ar_A,
