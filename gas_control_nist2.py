@@ -1772,19 +1772,19 @@ class GasControl:
     def MS_ON(self):
         """Sends a logic value (0 or 1) to perform remote digital triggering to RlyAA"""
         self.tmp_master.write_register(363, 0)
-        sleep(10)
+        time.sleep(10)
         print('MS sequence started')
     
     def MS_OFF(self):
         """Sends a logic value (0 or 1) to perform remote digital triggering to RlyAA"""
         self.tmp_master.write_register(363, 1)
-        sleep(10)
+        time.sleep(10)
         print('MS sequence stopped')
     
     def IR_ON(self):
         """Sends 5V to perform remote triggering to logic A"""    
         self.tmp_master.write_register(376, 5)
-        sleep(1)
+        time.sleep(1)
         self.tmp_master.write_register(376, 0)
         print('IR data acquisition started')
         now = datetime.now()
@@ -1825,7 +1825,7 @@ class GasControl:
             if result == 1:
                 break
             elif result == 0:
-                sleep(0.1)
+                time.sleep(0.1)
                 continue
 
 
