@@ -3,6 +3,7 @@
 __author__ = "Jorge Moncada Vivas"
 __version__ = "1.0"
 __email__ = "moncadaja@gmail.com"
+__date__ = "9/10/2024"
 
 Notes:
 By Jorge Moncada Vivas and contributions of Ryuichi Shimogawa
@@ -28,8 +29,8 @@ HID_TMP = "COM8"
 SUB_ADD_TMP = 2
 
 # This is a dictionary that maps the valve position and ID to an integer.
-# VALVE_POSITION = {"A": 0, "B": 1, "Unknown": 1, "pulse": 0, "cont": 1, "mix": 1}
-# VALVE_ID = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7, "H": 8, "I": 9}
+VALVE_POSITION = {"A": 0, "B": 1, "Unknown": 1, "pulse": 0, "cont": 1, "mix": 1}
+VALVE_ID = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7, "H": 8, "I": 9}
 
 
 class GasControl:
@@ -761,7 +762,7 @@ class GasControl:
             "CO2_AH": 1.0,
             "CO2_AL": 1.0,
             "CO2_BH": 1.0,
-            "CO2_AL": 1.0,
+            "CO2_BL": 1.0,
             "He_A": 1.0,
             "He_B": 1.0,
             "Ar_A": 1.0,
@@ -1424,14 +1425,14 @@ class GasControl:
             if "data" in value:
                 pressure = value.get("data")
             lst_p_a.append(format(pressure, ".2f"))
-            return lst_p_a[0]
+            # return lst_p_a[0]
 
         lst_p_b = []
         for value in values_p_b:
             if "data" in value:
                 pressure = value.get("data")
             lst_p_b.append(format(pressure, ".2f"))
-            return lst_p_b[0]
+            # return lst_p_b[0]
 
         # Calculating percentage values for the actual flows
 
